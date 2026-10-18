@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07070d" />
+      <stop offset="100%" stop-color="#0f0b1a" />
+    </linearGradient>
+    <linearGradient id="lineGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9B7CFF" />
+      <stop offset="100%" stop-color="#38CFFF" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)" />
+
+  <!-- Node Pipelines -->
+  <g transform="translate(80, 80)">
+    <!-- Node 1: Webhook Trigger -->
+    <rect x="20" y="120" width="160" height="80" rx="14" fill="#141420" stroke="#9B7CFF" stroke-width="2" />
+    <circle cx="50" cy="160" r="14" fill="#9B7CFF" opacity="0.3" />
+    <text x="75" y="155" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="13">Webhook Ingest</text>
+    <text x="75" y="172" fill="#A7A7B5" font-family="monospace" font-size="10">trigger: on_event</text>
+
+    <!-- Connector 1 -->
+    <path d="M 180 160 L 260 160" stroke="url(#lineGlow)" stroke-width="3" stroke-dasharray="6,4" />
+
+    <!-- Node 2: AI Parser / LLM Router -->
+    <rect x="260" y="100" width="180" height="120" rx="16" fill="#181828" stroke="#38CFFF" stroke-width="2" />
+    <circle cx="300" cy="140" r="16" fill="#38CFFF" opacity="0.3" />
+    <text x="325" y="135" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="14">AI Reasoning Node</text>
+    <text x="325" y="152" fill="#38CFFF" font-family="monospace" font-size="11">model: llm_orchestrator</text>
+    <rect x="280" y="175" width="140" height="25" rx="6" fill="#0d0d16" />
+    <text x="290" y="192" fill="#A7A7B5" font-family="monospace" font-size="10">classify &amp; extract</text>
+
+    <!-- Connectors out -->
+    <path d="M 440 140 L 520 80" stroke="#9B7CFF" stroke-width="2" />
+    <path d="M 440 180 L 520 240" stroke="#38CFFF" stroke-width="2" />
+
+    <!-- Node 3: CRM Database Action -->
+    <rect x="520" y="40" width="160" height="80" rx="14" fill="#141420" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+    <text x="545" y="75" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="13">Database Sync</text>
+    <text x="545" y="95" fill="#9B7CFF" font-family="monospace" font-size="10">status: synced</text>
+
+    <!-- Node 4: Telegram / Email Alert -->
+    <rect x="520" y="200" width="160" height="80" rx="14" fill="#141420" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+    <text x="545" y="235" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="13">Alert Dispatch</text>
+    <text x="545" y="255" fill="#38CFFF" font-family="monospace" font-size="10">channel: telegram_bot</text>
+  </g>
+</svg>

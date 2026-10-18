@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050505" />
+      <stop offset="50%" stop-color="#0e0e18" />
+      <stop offset="100%" stop-color="#050505" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9B7CFF" />
+      <stop offset="100%" stop-color="#38CFFF" />
+    </linearGradient>
+    <filter id="ogGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="60" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ogBg)" />
+
+  <!-- Ambient Orbs -->
+  <circle cx="250" cy="180" r="220" fill="#9B7CFF" opacity="0.3" filter="url(#ogGlow)" />
+  <circle cx="950" cy="450" r="260" fill="#38CFFF" opacity="0.25" filter="url(#ogGlow)" />
+
+  <!-- Glass Card container -->
+  <g transform="translate(100, 80)">
+    <rect width="1000" height="470" rx="28" fill="#11111a" fill-opacity="0.7" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+    
+    <!-- Top Bar -->
+    <circle cx="45" cy="45" r="8" fill="#ff5f56" />
+    <circle cx="70" cy="45" r="8" fill="#ffbd2e" />
+    <circle cx="95" cy="45" r="8" fill="#27c93f" />
+    <text x="500" y="50" fill="#A7A7B5" font-family="monospace" font-size="14" text-anchor="middle">VENOM DEV // DIGITAL ARCHITECTURE</text>
+
+    <!-- Content -->
+    <text x="60" y="150" fill="#38CFFF" font-family="sans-serif" font-weight="bold" font-size="20" letter-spacing="4">PORTFOLIO &amp; BRAND PLATFORM</text>
+    <text x="60" y="240" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="64">Abdeldjalil Medjahdi</text>
+    <text x="60" y="310" fill="url(#textGrad)" font-family="sans-serif" font-weight="700" font-size="34">Web Development &amp; AI Automation Specialist</text>
+
+    <text x="60" y="380" fill="#A7A7B5" font-family="sans-serif" font-size="20">
+      &ldquo;I build modern digital experiences and intelligent automation solutions.&rdquo;
+    </text>
+
+    <!-- Bottom Motto -->
+    <line x1="60" y1="415" x2="940" y2="415" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    <text x="60" y="445" fill="#9B7CFF" font-family="monospace" font-weight="bold" font-size="16">BUILD. AUTOMATE. INNOVATE.</text>
+    <text x="940" y="445" fill="#FFFFFF" opacity="0.4" font-family="monospace" font-size="14" text-anchor="end">VENOM-DEV.VERCEL.APP</text>
+  </g>
+</svg>
